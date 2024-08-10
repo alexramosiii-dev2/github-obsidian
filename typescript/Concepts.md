@@ -55,3 +55,13 @@ firstTuple[2]; //false
 
 const [firstValue, secondValue, thirdValue] = firstTuple; //destructure
 ```
+
+- name
+```js
+const secondTuple: [x: number, y: number] = [12, 24];
+
+secondTuple["x"]; // ERROR
+secondTuple.x; // ERROR
+
+const [x, y] = secondTuple; //destructure
+```
