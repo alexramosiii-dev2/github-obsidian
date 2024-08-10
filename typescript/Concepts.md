@@ -16,14 +16,22 @@ The compiler is installed in the node_modules directory and can be run with: npx
 - `symbol`
 - `any` // must be avoided
 - `unknown` // variable declaration with unknown type to be used on
+- `never` // throws an error whenever it is defined.
+- `undefined`
+- `null`
 
 ### Implicit vs Explicit Assignment
 - Explicit
 ```js
-let firstName: string = "Dylan";
+let firstName: string = "Dylan"; //single
+let familyNames: string[] = []; //array mutable
+let originalNames: readonly string[] = []; //array immutable
 ```
 
 - Implicit
 ```js
 let firstName = "Dylan";
 ```
+
+Array
+let names = string[] = []; //
