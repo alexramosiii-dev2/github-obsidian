@@ -9,11 +9,13 @@ The compiler is installed in the node_modules directory and can be run with: npx
 
 
 ### Available Types
-- boolean
-- number
-- string
-- bigint
-- symbol
+- `boolean`
+- `number`
+- `string`
+- `bigint`
+- `symbol`
+- `any` // must be avoided
+- `unknown` // variable declaration with unknown type to be used on
 
 ### Implicit vs Explicit Assignment
 - Explicit
