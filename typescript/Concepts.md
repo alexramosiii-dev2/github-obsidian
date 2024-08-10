@@ -21,6 +21,7 @@ The compiler is installed in the node_modules directory and can be run with: npx
 	let firstName: string = "Dylan";
 	sdasd
 	this is an added date
+	sdsadas
 	```
 
 - Implicit
