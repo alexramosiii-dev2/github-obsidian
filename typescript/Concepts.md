@@ -76,3 +76,20 @@ const car: { type: string, model: string, year: number } =
   year: 2009  
 };
 ```
+
+optional properties
+```js
+const car: { type: string, mileage?: number } = { // no error  
+  type: "Toyota"  
+};
+
+car.mileage = 2000; // still works
+```
+
+Index signature
+```js
+// makes a property pattern that is any string key with number value.
+const nameAgeMap: { [index: string]: number } = {};
+nameAgeMap.Jack = 25; // no error  
+nameAgeMap.Mark = "Fifty"; // error
+```
