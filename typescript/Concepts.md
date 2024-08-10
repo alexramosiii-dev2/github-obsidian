@@ -17,7 +17,9 @@ The compiler is installed in the node_modules directory and can be run with: npx
 
 ### Implicit vs Explicit Assignment
 - Explicit
-	`let firstName: string = "Dylan";`
+	```javascript
+	let firstName: string = "Dylan";`
+	```
 
 - Implicit
 	`let firstName = "Dylan";`
