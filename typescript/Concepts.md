@@ -56,12 +56,23 @@ firstTuple[2]; //false
 const [firstValue, secondValue, thirdValue] = firstTuple; //destructure
 ```
 
-- name
+- named tuples, only for documentation, no change in accessing the value.
 ```js
 const secondTuple: [x: number, y: number] = [12, 24];
 
 secondTuple["x"]; // ERROR
 secondTuple.x; // ERROR
 
-const [x, y] = secondTuple; //destructure
+const [x, y] = secondTuple; //destructure. correct
+const [y, x] = secondTuple; // y = 12, x = 24;
+```
+
+### Typescript Objects
+```js
+const car: { type: string, model: string, year: number } =
+{  
+  type: "Toyota",  
+  model: "Corolla",  
+  year: 2009  
+};
 ```
