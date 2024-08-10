@@ -33,5 +33,18 @@ let originalNames: readonly string[] = []; //array immutable
 let firstName = "Dylan";
 ```
 
-Array
-let names = string[] = []; //
+### Array
+```js
+let names1 = string[] = []; //mutable array
+let names2 = readonly string[] = []; //immutable array
+
+names1.push("John"); //no error
+names2.push("Joe"); //error
+```
+
+### Tuple
+- array with a pre-defined length **(immutable)** and types for each index.
+```js
+let firstTuple: readonly [number, string, boolean];
+firstTuple = [55, "Jane", false]; // error on mistmatch
+```
