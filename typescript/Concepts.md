@@ -44,7 +44,14 @@ names2.push("Joe"); //error
 
 ### Tuple
 - array with a pre-defined length **(immutable)** and types for each index.
+- always make tuple readonly. 
 ```js
 let firstTuple: readonly [number, string, boolean];
 firstTuple = [55, "Jane", false]; // error on mistmatch
+
+firstTuple[0]; //55
+firstTuple[1]; //Jane
+firstTuple[2]; //false
+
+const [firstValue, secondValue, thirdValue] = firstTuple; //destructure
 ```
