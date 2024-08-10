@@ -22,4 +22,5 @@ The compiler is installed in the node_modules directory and can be run with: npx
 	```
 
 - Implicit
-`let firstName = "Dylan";`
+```javascript
+```let firstName = "Dylan";`
