@@ -217,7 +217,14 @@ Casting
 ```ts
 let x: unknown = 'hello';  
 console.log((x as string).length);
+console.log((<string>x).length);// would not work in TSX (JSX twin)
 
 let x: unknown = 4;
-console.log((x as string).length);// undefined. 
+console.log((x as string).length);// undefined.
+
+
+//To override type errors that TypeScript may throw when casting, first cast to `unknown`, then to the target type.
+let x = 'hello';  
+console.log(((x as unknown) as number).length);
+// x is not actually a number so this will return undefined
 ```
