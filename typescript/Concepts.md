@@ -17,11 +17,12 @@ LIST
 - `string`
 - `bigint`
 - `symbol`
-- `any` // must be avoided
-- `unknown` // variable declaration with unknown type to be used on
-- `never` // throws an error whenever it is defined.
+- `any` - must be avoided \*\*defaults when no type is specified
+- `unknown` - variable declaration with unknown type to be used on
+- `never` - throws an error whenever it is defined.
 - `undefined`
 - `null`
+- `void` - for function return
 
 ### Implicit vs Explicit Assignment
 - Explicit
@@ -185,5 +186,4 @@ Union types or "either of the two"
 let color: number | string;
 let color = 0000000;
 let color = "Black";
-
 ```
