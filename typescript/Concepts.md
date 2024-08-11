@@ -6,6 +6,9 @@ A common way to use TypeScript is to use the official TypeScript compiler, which
 The compiler is installed in the node_modules directory and can be run with: npx tsc.
 
 `npx tsc`
+```dataview
+LIST
+```
 
 
 ### Available Types
