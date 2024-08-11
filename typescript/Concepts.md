@@ -102,7 +102,8 @@ Enums
 ```ts
 // special "class" that represents a group of constants
 
-//STRING (1 of 2)
+
+//NUMERIC (1 of 2) - default
 enum CardinalDirections{  
   North,  
   East,  
@@ -111,5 +112,42 @@ enum CardinalDirections{
 }
 
 console.log(CardinalDirections.North;); // logs 0;
-//NUMERIC (2 of 2)
+
+
+//NUMERIC - Initialized
+enum CardinalDirections {  
+  North = 1,  
+  East,  
+  South,  
+  West  
+}
+console.log(CardinalDirections.North;); // logs 1;
+console.log(CardinalDirections.West;); // logs 4;
+
+//assign unique number values for each enum value
+enum StatusCodes {  
+  NotFound = 404,  
+  Success = 200,  
+  Accepted = 202,  
+  BadRequest = 400  
+}
+
+//STRING (2 of 2)
+enum CardinalDirections {  
+  North = 'North',  
+  East = "East",  
+  South = "South",  
+  West = "West"  
+};
+
+//Technically, you can mix and match string and numeric enum values, but it is recommended not to do so.
+
+```
+
+Aliases and Interfaces
+	-Aliases and interfaces are similar but interfaces are only for objects while the rest are aliases.
+```ts
+//TypeScript allows types to be defined separately from the variables that use them.
+
+
 ```
