@@ -187,3 +187,22 @@ let color: number | string;
 let color = 0000000;
 let color = "Black";
 ```
+
+Functions
+```ts
+//default and optional parameters
+function pow(value: number = 10, exponent?: number) {  
+  return value ** exponent;
+}
+
+//kagulu na pero balamu destructuring yamu.
+function op({ dividend, divisor }:{ dividend: number, divisor: number })
+{  
+  return dividend / divisor;  
+}
+
+//Rest parameters using spread operator
+function add(a: number, ...rest: number[]) {  
+  return a + rest.reduce((p, c) => p + c, 0);  
+}
+```
