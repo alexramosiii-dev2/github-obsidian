@@ -1,4 +1,4 @@
-### How do I use TypeScript?
+#### How do I use TypeScript?
 A common way to use TypeScript is to use the official TypeScript compiler, which transpiles TypeScript code into JavaScript.
 
 `npm install typescript --save-dev`
@@ -11,7 +11,7 @@ LIST
 ```
 
 
-### Available Types
+#### Available Types
 - `boolean`
 - `number`
 - `string`
@@ -22,9 +22,9 @@ LIST
 - `never` - throws an error whenever it is defined.
 - `undefined`
 - `null`
-- `void` - for function return
+- `void` - for-no return functions
 
-### Implicit vs Explicit Assignment
+#### Implicit vs Explicit Assignment
 - Explicit
 ```ts
 let firstName: string = "Dylan"; //single
@@ -37,7 +37,7 @@ let originalNames: readonly string[] = []; //array immutable
 let firstName = "Dylan";
 ```
 
-### Array
+#### Array
 ```ts
 let names1 = string[] = []; //mutable array
 let names2 = readonly string[] = []; //immutable array
@@ -46,7 +46,7 @@ names1.push("John"); //no error
 names2.push("Joe"); //error
 ```
 
-### Tuple
+#### Tuple
 - array with a pre-defined length **(immutable)** and types for each index.
 - always make tuple readonly. 
 ```ts
@@ -71,7 +71,7 @@ const [x, y] = secondTuple; //destructure. correct
 const [y, x] = secondTuple; // y = 12, x = 24;
 ```
 
-### Typescript Objects
+#### Typescript Objects
 ```ts
 const car: { type: string, model: string, year: number } =
 {  
@@ -81,7 +81,7 @@ const car: { type: string, model: string, year: number } =
 };
 ```
 
-optional properties
+#### Optional Properties
 ```ts
 const car: { type: string, mileage?: number } = { // no error  
   type: "Toyota"  
@@ -90,7 +90,7 @@ const car: { type: string, mileage?: number } = { // no error
 car.mileage = 2000; // still works
 ```
 
-Index signature
+#### Index signature
 ```ts
 // makes a property pattern that is any string key with number value.
 const nameAgeMap: { [index: string]: number } = {};
@@ -98,8 +98,7 @@ nameAgeMap.Jack = 25; // no error
 nameAgeMap.Mark = "Fifty"; // error
 ```
 
-Enums 
-
+#### Enums 
 ```ts
 // special "class" that represents a group of constants
 
@@ -145,9 +144,9 @@ enum CardinalDirections {
 
 ```
 
-Aliases and Interfaces
-	-Aliases and interfaces are similar but interfaces are only for objects while aliases can do both objects and primitive types.
-	-Interfaces can be extended/inherited
+#### Aliases and Interfaces
+- Aliases and interfaces are similar but interfaces are only for objects while aliases can do both objects and primitive types.
+- Interfaces can be extended/inherited
 ```ts
 //TypeScript allows types to be defined separately from the variables that use them.
 
@@ -184,14 +183,14 @@ const Rect1: Rectangle = {
 
 ```
 
-Union types or "either of the two"
+#### Union types or "either of the two"
 ```ts
 let color: number | string;
 let color = 0000000;
 let color = "Black";
 ```
 
-Functions
+#### Functions
 ```ts
 //default and optional parameters
 function pow(value: number = 10, exponent?: number) {  
@@ -213,7 +212,7 @@ function add(a: number, ...rest: number[]) {
 type Negate = (value: number) => number;
 ```
 
-Casting
+#### Casting
 ```ts
 let x: unknown = 'hello';  
 console.log((x as string).length);
@@ -229,7 +228,7 @@ console.log(((x as unknown) as number).length);
 // x is not actually a number so this will return undefined
 ```
 
-Classes
+#### Classes
 ```ts
 class Person {  
 	 name: string;
@@ -248,7 +247,7 @@ person2.skincolor; // brown
 
 ```
 
-Implement a interface
+#### Implement a interface
 ```ts
 interface Shape {  getArea: () => number; }  
 
@@ -264,7 +263,7 @@ class Square extends Rectangle {
 }
 ```
 
-Abstract Classes
+#### Abstract Classes
 ```ts
 //defines methods with no body
 //abstract members do not need body.
@@ -287,3 +286,19 @@ rect1.getSides();
 ```
 
 
+#### Basic Generics
+[W3Schools - TS Basic Generics](https://www.w3schools.com/typescript/typescript_basic_generics.php)
+#### Utility Types Generics
+- `Partial <typeName>`
+- `Required <typeName>`
+- `Record <typeName>`
+- `Omit <typeName>`
+- `Pick <typeName>`
+- `Exclude <typeName>`
+- `ReturnType <typeName>`
+- `Parameters <typeName>`
+- `Readonly <typeName>`
+
+#### Typescript V5 features
+Template Literal Types
+Index Signature Labels
