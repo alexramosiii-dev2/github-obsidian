@@ -228,3 +228,60 @@ let x = 'hello';
 console.log(((x as unknown) as number).length);
 // x is not actually a number so this will return undefined
 ```
+
+Classes
+```ts
+class Person {  
+	 name: string;
+	 private age: number;
+	 private readonly race: string; //can't be change once set
+	 // declares the property skincolor
+	 public constructor(private skincolor: string) {};
+}
+
+const person = new Person();  
+person.name = "Jane";
+person.age = 56 //ERROR
+
+const person2 = new Person("brown");
+person2.skincolor; // brown
+
+```
+
+Implement a interface
+```ts
+interface Shape {  getArea: () => number; }  
+
+//can implement multiple
+class Rectangle implements Shape {
+	//interfaces makes contract for the class to include all its methods
+	public getArea(): number { }  
+}  
+
+//can only extend onces
+class Square extends Rectangle {  
+  // inherits getArea() from rectangle
+}
+```
+
+Abstract Classes
+```ts
+//defines methods with no body
+//abstract members do not need body.
+abstract class Shape {
+	public abstract getArea(): number;
+	public getSides(): number {
+		return;
+	};
+}
+
+class Rectangle extends Shape {
+	public getArea() {
+		return;
+	}
+	// it is optional to include all abstract class abstract members
+}
+
+const rect1 = new Rectangle();
+rect1.getSides();
+```
