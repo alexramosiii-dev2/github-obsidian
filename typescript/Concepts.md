@@ -285,3 +285,5 @@ class Rectangle extends Shape {
 const rect1 = new Rectangle();
 rect1.getSides();
 ```
+
+
