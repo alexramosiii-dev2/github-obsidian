@@ -178,5 +178,12 @@ const Rect1: Rectangle = {
 	sides: 4,
 }
 
+```
+
+Union types or "either of the two"
+```ts
+let color: number | string;
+let color = 0000000;
+let color = "Black";
 
 ```
