@@ -1,4 +1,3 @@
-[asdasdasd][#How do I use TypeScript?]
 ### How do I use TypeScript?
 A common way to use TypeScript is to use the official TypeScript compiler, which transpiles TypeScript code into JavaScript.
 
@@ -26,19 +25,19 @@ LIST
 
 ### Implicit vs Explicit Assignment
 - Explicit
-```js
+```ts
 let firstName: string = "Dylan"; //single
 let familyNames: string[] = []; //array mutable
 let originalNames: readonly string[] = []; //array immutable
 ```
 
 - Implicit
-```js
+```ts
 let firstName = "Dylan";
 ```
 
 ### Array
-```js
+```ts
 let names1 = string[] = []; //mutable array
 let names2 = readonly string[] = []; //immutable array
 
@@ -49,7 +48,7 @@ names2.push("Joe"); //error
 ### Tuple
 - array with a pre-defined length **(immutable)** and types for each index.
 - always make tuple readonly. 
-```js
+```ts
 let firstTuple: readonly [number, string, boolean];
 firstTuple = [55, "Jane", false]; // error on mistmatch
 
@@ -61,7 +60,7 @@ const [firstValue, secondValue, thirdValue] = firstTuple; //destructure
 ```
 
 - named tuples, only for documentation, no change in accessing the value.
-```js
+```ts
 const secondTuple: [x: number, y: number] = [12, 24];
 
 secondTuple["x"]; // ERROR
@@ -72,7 +71,7 @@ const [y, x] = secondTuple; // y = 12, x = 24;
 ```
 
 ### Typescript Objects
-```js
+```ts
 const car: { type: string, model: string, year: number } =
 {  
   type: "Toyota",  
@@ -82,7 +81,7 @@ const car: { type: string, model: string, year: number } =
 ```
 
 optional properties
-```js
+```ts
 const car: { type: string, mileage?: number } = { // no error  
   type: "Toyota"  
 };
@@ -91,9 +90,26 @@ car.mileage = 2000; // still works
 ```
 
 Index signature
-```js
+```ts
 // makes a property pattern that is any string key with number value.
 const nameAgeMap: { [index: string]: number } = {};
 nameAgeMap.Jack = 25; // no error  
 nameAgeMap.Mark = "Fifty"; // error
+```
+
+Enums 
+
+```ts
+// special "class" that represents a group of constants
+
+//STRING (1 of 2)
+enum CardinalDirections{  
+  North,  
+  East,  
+  South,  
+  West  
+}
+
+console.log(CardinalDirections.North;); // logs 0;
+//NUMERIC (2 of 2)
 ```
