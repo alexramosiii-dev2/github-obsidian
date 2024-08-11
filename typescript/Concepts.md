@@ -145,9 +145,38 @@ enum CardinalDirections {
 ```
 
 Aliases and Interfaces
-	-Aliases and interfaces are similar but interfaces are only for objects while the rest are aliases.
+	-Aliases and interfaces are similar but interfaces are only for objects while aliases can do both objects and primitive types.
+	-Interfaces can be extended/inherited
 ```ts
 //TypeScript allows types to be defined separately from the variables that use them.
+
+//ALIAS - primitives + objects
+type Car = {  
+  year: CarYear,  
+  type: CarType,  
+  model: CarModel  
+}
+
+
+//INTERFACE - for objects only
+interface Rectangle {  
+  height: number,  
+  width: number  
+}
+
+//INTERFACE EXTENSION
+interface Shape {  
+  color: string,
+}  
+  
+interface Rectangle extends Shape {
+  sides: number,  
+}
+
+const Rect1: Rectangle = {
+	color: "Red",
+	sides: 4,
+}
 
 
 ```
