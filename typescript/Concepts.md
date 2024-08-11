@@ -152,6 +152,9 @@ Aliases and Interfaces
 //TypeScript allows types to be defined separately from the variables that use them.
 
 //ALIAS - primitives + objects
+type CarYear = number; 
+type CarType = string;  
+type CarModel = string;
 type Car = {  
   year: CarYear,  
   type: CarType,  
@@ -205,4 +208,16 @@ function op({ dividend, divisor }:{ dividend: number, divisor: number })
 function add(a: number, ...rest: number[]) {  
   return a + rest.reduce((p, c) => p + c, 0);  
 }
+
+//Alias for arrow function
+type Negate = (value: number) => number;
+```
+
+Casting
+```ts
+let x: unknown = 'hello';  
+console.log((x as string).length);
+
+let x: unknown = 4;
+console.log((x as string).length);// undefined. 
 ```
