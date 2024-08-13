@@ -30,13 +30,11 @@ Route::get('/jobs/{id}', function ($id) {
 
 //jobs@update
 Route::put('/jobs/{id}', function ($id) {
-	return redirect()->route('jobs')
-	->with('status', 'Job updated successfully!');
+	return redirect("/jobs")
 });
 
 //jobs@destroy
 Route::delete('/jobs/{id}', function ($id) {
-	return redirect()->route('jobs')
-	->with('status', 'Job deleted successfully!');
+	return redirect("/jobs")
 });
 ```
