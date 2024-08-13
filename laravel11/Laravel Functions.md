@@ -1,5 +1,7 @@
 - `abort( 404 | [error_code])` - redirects to 404 page.
 - `request()` - returns request object.
+- `request()->all()` - returns all form properties as object.
+- `request('first_name')` - returns form property 'title'
 
 ## Migration
 `php artisan make:migration` - generate a migration file
