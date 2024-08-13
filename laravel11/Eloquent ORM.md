@@ -59,3 +59,6 @@ class Users extends Controller {
 	}
 }
 ```
+
+### Install Laravel Debugger Bar
+- `composer require barryvdh/laravel-debugbar --dev`

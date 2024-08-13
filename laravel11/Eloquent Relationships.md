@@ -50,11 +50,11 @@
 - If you can't follow the naming convention
 	- `belongsToMany(Book::class, 'pivot_name', 'foreign_name', 'related_name');`
 - 2-10 author = 2-10 book
-- `App\Models\Author::first()->attach($bookID)`
-- `App\Models\Book::first()->attach(App\Models\Author::find($bookID))`
-- `App\Models\Book::first()->sync([$author_id1, $author_id2])`
+- `App\Models\Author::first()->books()->attach($bookID)`
+- `App\Models\Book::first()->authors()->attach(App\Models\Author::find($bookID))`
+- `App\Models\Book::first()->authors()->sync([$author_id1, $author_id2])`
 	- Attach multiple authors (this will replace existing authors)
-- `App\Models\Book::saveMany()->sync([$author_id1, $author_id2])`
+- `App\Models\Book::first()->authors()->saveMany([$author_id1, $author_id2])`
 	- Attach multiple authors without replacing existing ones
 
 ```php

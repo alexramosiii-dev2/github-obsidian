@@ -1,7 +1,10 @@
-Used to create test data and seed your database with fake data during development.
-
-`php artisan make:factory FactoryName`
-
+\
+### Factory
+- Used to scaffold data for development. Useful for QA tests.
+- `php artisan make:factory FactoryName`
+	- create a factory file
+- `php artisan make:model ModelName -mf`
+	- create a model with associated migration ( -m ) and factory ( -f )
 ```php
 namespace Database\Factories;
 
@@ -29,3 +32,17 @@ class FactoryName extends Factory
 
 }
 ```
+
+### Seeders
+- used to trigger factories and database calls.
+
+- `database/seeder/DatabaseSeeder.php`
+	- file that contains the seeder file
+
+- `php artisan db:seed`
+- `php artisan migrate:fresh --seed`
+	- reset database and run seeder file
+
+- `php artisan make:seeder SeederName`
+	- create a separate seeder file
+	- `php artisan db:seed --class=SeederName`
