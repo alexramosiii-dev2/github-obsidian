@@ -1,10 +1,3 @@
-
-<style>
-	.btn {
-		width: 500px;
-	}
-</style>
-
-<button class="btn">Submit</button>
-
-
+<div class="custom-button">
+  <button id="my-button">Click Me</button>
+</div>
