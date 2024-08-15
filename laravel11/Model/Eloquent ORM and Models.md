@@ -34,9 +34,11 @@ class Users extends Controller {
 		$user = User::find($id);
 
 // ** CRUD **
-// User::create(['field1' => 'val', 'field2' => 'val2'])
-// User::where('field', 'value')->update(['field' => 'new value']);
-// User::where('field', 'value')->delete();
+// User::create(['field1' => 'val', 'field2' => 'val2']);
+// User::find($id);
+// User::findOrFail($id); // if null
+// User::find($id)->update(['field' => 'new value']);
+// User::find($id)->delete();
 
 // User::first();
 // User::count();
@@ -44,6 +46,7 @@ class Users extends Controller {
 // User::where('field', 'value')->get();
 // User::where('field', 'operator','value')->get();
 // User::where('field', 'value')->orWhere('field', 'operator', 'value')->get();
+
 // User::orderBy('field', 'desc/asc')->get();
 // User::all->latest();
 // User::limit(10)->get();

@@ -6,8 +6,9 @@ Route::get('/jobs', function () {
 	return ('jobs/index', $data) 
 });
 
-//jobs@new
+//jobs@new :also known as 'store'
 Route::post('/jobs', function () {
+	// validate and authorization check
 	return redirect()->route('jobs') 
 	->with('status', 'Job created successfully!');
 });
@@ -29,12 +30,19 @@ Route::get('/jobs/{id}', function ($id) {
 });
 
 //jobs@update
-Route::put('/jobs/{id}', function ($id) {
+Route::patch('/jobs/{id}', function ($id) {
+	// validate and authorization check
 	return redirect("/jobs")
 });
 
 //jobs@destroy
 Route::delete('/jobs/{id}', function ($id) {
+	// validate and authorization check
 	return redirect("/jobs")
 });
 ```
+
+##### Extra notes
+- patch redirects to the show view
+- delete redirects to the index view
+- delete form is better inside the edit view
