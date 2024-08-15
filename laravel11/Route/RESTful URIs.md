@@ -46,3 +46,4 @@ Route::delete('/jobs/{id}', function ($id) {
 - patch redirects to the show view
 - delete redirects to the index view
 - delete form is better inside the edit view
+- check for route model binding
