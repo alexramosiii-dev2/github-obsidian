@@ -1,12 +1,10 @@
 #### Static Views
 ```php
-// THIS CAN BE SIMPLIFIED INTO 
 Route::get("/", function() {
 	return view("index");
 })
 
-// =====
-
+// same thing as above
 Route::view("/", "index");
 ```
 
@@ -22,4 +20,9 @@ Route::controller(ControllerName::class)->group(function() {
 	Route::patch('/jobs/{job}', 'update');
 	Route::delete('/jobs/{job}', 'destroy');
 })
+```
+
+#### Route Resources
+```php
+Route::resource('jobs', JobsController::class); #using resources
 ```

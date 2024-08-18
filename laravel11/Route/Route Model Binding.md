@@ -9,7 +9,7 @@ Route::get('/jobs/{id}', function ($id) {
 /***** USING ROUTE MODEL BINDING *****/
 
 // 1. wildcard '{job}' and param '$job' should be same name.
-Route::get('/jobs/{job}', function (App\Model\Job $job) {
+Route::get('/jobs/{job}', functtabion (App\Model\Job $job) {
 	return ('jobs.show', ['job' => $job])
 });
 
